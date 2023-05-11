@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Students[] studentsArray = new Students[3];
+     /*   Students[] studentsArray = new Students[3];
         studentsArray[0] = new Students("Houman", 1234);
         studentsArray[1] = new Students("Gerd", 12345);
         studentsArray[2] = new Students("Zied", 12346);
@@ -18,7 +18,12 @@ public class Main {
 
         System.out.println(studentDataBank);
         System.out.println(Arrays.toString(studentDataBank.getAllStudents()));
-        System.out.println(studentDataBank.randomStudent());
+        System.out.println(studentDataBank.randomStudent());*/
+
+        ComputerScienceStudent[] computerScienceStudent= new ComputerScienceStudent[1];
+        computerScienceStudent[0]= new ComputerScienceStudent("Houman", 12, true);
+        System.out.println(Arrays.toString(computerScienceStudent));
+
     }
 
 }
