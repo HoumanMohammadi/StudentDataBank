@@ -4,33 +4,45 @@ import java.util.Arrays;
 
 public class StudentDB {
 
-    private Students[] students;
+    private Student[] Students;
 
-    public StudentDB(Students[] students) {
-        this.students = students.clone();
+    public StudentDB(Student[] Students) {
+        this.Students = Students.clone();
     }
 
-    public Students[] getStudents() {
-        return students;
+    public Student[] getStudents() {
+        return Students;
     }
 
-    public void setStudents(Students[] students) {
-        this.students = students;
+    public Student findById(int id) throws StudentNotFoundException {
+        for (int i = 0; i< Students.length; i++){
+            if (Students[i].getStudentID()==id){
+                return Students[i];
+            }
+        }
+        throw new StudentNotFoundException();
+    }
+
+
+
+
+    public void setStudents(Student[] Students) {
+        this.Students = Students;
     }
 
     @Override
     public String toString() {
         return "StudentDB{" +
-                "students=" + Arrays.toString(students);
+                "students=" + Arrays.toString(Students);
     }
 
-    public Students[] getAllStudents(){
+    public Student[] getAllStudents(){
         return getStudents();
     }
 
-    public Students randomStudent(){
-        int randomStudent = (int) (Math.random()* students.length+1);
-        return students[randomStudent];
+    public Student randomStudent(){
+        int randomStudent = (int) (Math.random()* Students.length+1);
+        return Students[randomStudent];
     }
 
 

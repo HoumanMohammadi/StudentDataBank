@@ -2,7 +2,7 @@ package de.iav;
 
 import java.util.Objects;
 
-public class ComputerScienceStudent extends Students implements Citizen {
+public class ComputerScienceStudent extends Student implements Citizen {
 
     private boolean gender;
 
@@ -15,6 +15,8 @@ public class ComputerScienceStudent extends Students implements Citizen {
     public int getIdentityCardNumber() {
         return 0;
     }
+
+
 
     public ComputerScienceStudent(String studentName, int studentID, boolean gender) {
         super(studentName, studentID);
@@ -37,6 +39,7 @@ public class ComputerScienceStudent extends Students implements Citizen {
     public String toString() {
         return "ComputerScienceStudent{" +
                 "gender=" + gender +
+                "student name= "+getStudentName()+
                 '}';
     }
 

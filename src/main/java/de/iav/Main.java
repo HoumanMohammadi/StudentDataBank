@@ -20,9 +20,19 @@ public class Main {
         System.out.println(Arrays.toString(studentDataBank.getAllStudents()));
         System.out.println(studentDataBank.randomStudent());*/
 
-        ComputerScienceStudent[] computerScienceStudent= new ComputerScienceStudent[1];
-        computerScienceStudent[0]= new ComputerScienceStudent("Houman", 12, true);
+        ComputerScienceStudent[] computerScienceStudent= new ComputerScienceStudent[3];
+        computerScienceStudent[0]= new ComputerScienceStudent("Houman", 1, true);
+        computerScienceStudent[1]= new ComputerScienceStudent("Natthias", 22, true);
+        computerScienceStudent[2]= new ComputerScienceStudent("Zied", 333, true);
+        StudentDB studentDataBank = new StudentDB(computerScienceStudent);
         System.out.println(Arrays.toString(computerScienceStudent));
+
+        try {
+            System.out.println(studentDataBank.findById(22));
+        } catch (StudentNotFoundException e) {
+            System.out.println("ID nicht existiert");;
+        }
+        System.out.println("Es wird nichts ausgegeben werden");
 
     }
 

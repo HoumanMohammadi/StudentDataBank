@@ -2,15 +2,16 @@ package de.iav;
 
 import java.util.Objects;
 
-public class Students {
+public class Student {
 
     private String studentName;
     private int studentID;
 
-    public Students(String studentName, int studentID) {
+    public Student(String studentName, int studentID) {
         this.studentName = studentName;
         this.studentID = studentID;
     }
+
 
     public String getStudentName() {
         return studentName;
@@ -40,7 +41,7 @@ public class Students {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Students students = (Students) o;
+        Student students = (Student) o;
         return studentID == students.studentID && Objects.equals(studentName, students.studentName);
     }
 
