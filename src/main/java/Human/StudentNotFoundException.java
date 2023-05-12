@@ -1,4 +1,4 @@
-package de.iav;
+package Human;
 
 public class StudentNotFoundException extends Exception{
 }

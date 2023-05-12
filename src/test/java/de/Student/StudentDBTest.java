@@ -1,6 +1,4 @@
-package de.iav;
-
-import static org.junit.jupiter.api.Assertions.*;
+package de.Student;
 
 class StudentDBTest {
 

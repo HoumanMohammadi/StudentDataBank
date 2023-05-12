@@ -1,4 +1,4 @@
-package de.iav;
+package Human;
 
 import java.util.Arrays;
 

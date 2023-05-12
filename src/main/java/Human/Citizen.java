@@ -1,4 +1,4 @@
-package de.iav;
+package Human;
 
 public interface Citizen {
 
