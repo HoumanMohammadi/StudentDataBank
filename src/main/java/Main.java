@@ -1,3 +1,4 @@
+import Animal.PassportPrintingService;
 import Human.ComputerScienceStudent;
 import Human.StudentDB;
 import Human.StudentNotFoundException;
@@ -35,7 +36,9 @@ public class Main {
         }
         System.out.println("Es wird nichts ausgegeben werden");
 
-        System.out.println();
+        PassportPrintingService<ComputerScienceStudent>  computerScienceStudentPassportPrintingService= new PassportPrintingService<>(computerScienceStudent[0]);
+
+        computerScienceStudentPassportPrintingService.printPassport();
 
     }
 
