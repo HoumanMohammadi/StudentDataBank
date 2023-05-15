@@ -4,6 +4,9 @@ public class Pet {
 
     private String name;
 
+    public Pet(String name) {
+    }
+
     public String getName() {
         return name;
     }

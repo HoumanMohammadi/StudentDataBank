@@ -1,5 +1,7 @@
 import Animal.PassportPrintingService;
+import Animal.Pet;
 import Human.ComputerScienceStudent;
+import Human.Student;
 import Human.StudentDB;
 import Human.StudentNotFoundException;
 
@@ -11,16 +13,10 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-     /*   Students[] studentsArray = new Students[3];
-        studentsArray[0] = new Students("Houman", 1234);
-        studentsArray[1] = new Students("Gerd", 12345);
-        studentsArray[2] = new Students("Zied", 12346);
-
-        StudentDB studentDataBank = new StudentDB(studentsArray);
-
-        System.out.println(studentDataBank);
-        System.out.println(Arrays.toString(studentDataBank.getAllStudents()));
-        System.out.println(studentDataBank.randomStudent());*/
+        Student[] studentsArray = new Student[3];
+        studentsArray[0] = new Student("Houman", 1234);
+        studentsArray[1] = new Student("Gerd", 12345);
+        studentsArray[2] = new Student("Zied", 12346);
 
         ComputerScienceStudent[] computerScienceStudent= new ComputerScienceStudent[3];
         computerScienceStudent[0]= new ComputerScienceStudent("Houman", 1, true);
@@ -36,9 +32,17 @@ public class Main {
         }
         System.out.println("Es wird nichts ausgegeben werden");
 
-        PassportPrintingService<ComputerScienceStudent>  computerScienceStudentPassportPrintingService= new PassportPrintingService<>(computerScienceStudent[0]);
+        for (int i=0; i< computerScienceStudent.length;i++){
+            PassportPrintingService<ComputerScienceStudent[]>  computerScienceStudentPassportPrintingService= new PassportPrintingService<>(computerScienceStudent);
+            computerScienceStudentPassportPrintingService.printPassport();
+        }
 
-        computerScienceStudentPassportPrintingService.printPassport();
+
+        PassportPrintingService<Student> studentPassportPrintingService= new PassportPrintingService<>(studentsArray[2]);
+        studentPassportPrintingService.printPassport();
+
+        PassportPrintingService<Pet> petPassportPrintingService=new PassportPrintingService<>(new Pet("Batzi"));
+        petPassportPrintingService.printPassport();
 
     }
 
