@@ -6,9 +6,16 @@ public class ComputerScienceStudent extends Student implements Citizen {
 
     private boolean gender;
 
+    private String studentAdress;
+
     @Override
     public String getAdress() {
-        return null;
+        return studentAdress;
+    }
+
+    @Override
+    public void setStudentName(String studentName) {
+        super.setStudentName(studentName);
     }
 
     @Override

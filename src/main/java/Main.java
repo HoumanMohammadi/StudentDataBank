@@ -1,9 +1,6 @@
 import Animal.PassportPrintingService;
 import Animal.Pet;
-import Human.ComputerScienceStudent;
-import Human.Student;
-import Human.StudentDB;
-import Human.StudentNotFoundException;
+import Human.*;
 
 import java.util.Arrays;
 
@@ -43,6 +40,7 @@ public class Main {
 
         PassportPrintingService<Pet> petPassportPrintingService=new PassportPrintingService<>(new Pet("Batzi"));
         petPassportPrintingService.printPassport();
+
 
     }
 
