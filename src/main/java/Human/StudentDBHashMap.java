@@ -1,8 +1,6 @@
 package Human;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class StudentDBHashMap {
 
@@ -28,6 +26,23 @@ public class StudentDBHashMap {
         }
         throw new StudentNotFoundException();
     }
+    
+//    public Student randomStudent(){
+//
+//
+//        List<Map.Entry<String, Student>> arrayList = new ArrayList<>(studentMap.entrySet());
+//
+//        Random random= new Random();
+//        int randomIndex= random.nextInt(studentMap.size());
+//
+//        List<String> keysList = new ArrayList<>(studentMap.keySet());
+//
+//        return arrayList.get(keysList.get(randomIndex));
+//
+//
+//    }
+
+    
 
     @Override
     public boolean equals(Object o) {
